@@ -1,0 +1,5 @@
+DESCRIPTION="Additional XCB libraries"
+HOMEPAGE="http://xcb.sourceforge.net/"
+SRC_URI="http://xcb.freedesktop.org/dist/${P}.tar.bz2"
+
+CYGCONF_ARGS="--disable-static"
