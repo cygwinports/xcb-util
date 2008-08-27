@@ -1,0 +1,36 @@
+DESCRIPTION="Additional XCB libraries"
+HOMEPAGE="http://xcb.sourceforge.net/"
+SRC_URI="http://xcb.freedesktop.org/dist/${P}.tar.bz2"
+PATCH_URI="0.2.1-no-undefined.patch"
+
+# aux/
+USE_MANAGED_MOUNT=1
+
+PKG_NAMES="${PN}"
+PKG_HINTS="src"
+PKG_CONTENTS[0]="usr/share/doc/"
+
+n=1
+for xcb in atom aux event icccm image keysyms property render-util reply
+do
+	case ${xcb} in
+		aux)	xtra="usr/include/xcb/xcb_bitops.h" ;;
+		image)	xtra="usr/include/xcb/xcb_pixel.h" ;;
+		*)  	xtra=""  ;;
+	esac
+
+	PKG_NAMES+=" libxcb-${xcb}0 libxcb-${xcb}-devel"
+	PKG_HINTS+=" ${xcb}-lib ${xcb}-dev"
+	PKG_CONTENTS[((n++))]="usr/bin/cygxcb-${xcb}-0.dll"
+	PKG_CONTENTS[((n++))]="${xtra} usr/include/xcb/xcb_${xcb/-}.h
+	                       usr/lib/libxcb-${xcb}.*
+	                       usr/lib/pkgconfig/xcb-${xcb/-}.pc"
+done
+
+# requires a symbol to be defined in the dependent executable
+PKG_NAMES+=" libxcb-wm-devel"
+PKG_HINTS+=" wm-dev"
+PKG_CONTENTS[((n++))]="usr/include/xcb/xcb_wm.h
+                       usr/lib/libxcb-wm.*
+                       usr/lib/pkgconfig/xcb-wm.pc"
+unset n
