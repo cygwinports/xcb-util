@@ -1,7 +1,7 @@
 DESCRIPTION="Additional XCB libraries"
 HOMEPAGE="http://xcb.sourceforge.net/"
 SRC_URI="http://xcb.freedesktop.org/dist/${P}.tar.bz2"
-PATCH_URI="0.2.1-no-undefined.patch"
+PATCH_URI="0.3.0-no-undefined.patch"
 
 # aux/
 USE_MANAGED_MOUNT=1
@@ -10,8 +10,12 @@ PKG_NAMES="${PN}"
 PKG_HINTS="src"
 PKG_CONTENTS[0]="usr/share/doc/"
 
+xcblibs="atom aux event icccm image keysyms property render-util reply"
+xcbvers=(1    0   1     1     0     0       1        0           1)
+
 n=1
-for xcb in atom aux event icccm image keysyms property render-util reply
+v=0
+for xcb in ${xcblibs}
 do
 	case ${xcb} in
 		aux)	xtra="usr/include/xcb/xcb_bitops.h" ;;
@@ -19,9 +23,9 @@ do
 		*)  	xtra=""  ;;
 	esac
 
-	PKG_NAMES+=" libxcb-${xcb}0 libxcb-${xcb}-devel"
+	PKG_NAMES+=" libxcb-${xcb}${xcbvers[$v]} libxcb-${xcb}-devel"
 	PKG_HINTS+=" ${xcb}-lib ${xcb}-dev"
-	PKG_CONTENTS[((n++))]="usr/bin/cygxcb-${xcb}-0.dll"
+	PKG_CONTENTS[((n++))]="usr/bin/cygxcb-${xcb}-${xcbvers[((v++))]}.dll"
 	PKG_CONTENTS[((n++))]="${xtra} usr/include/xcb/xcb_${xcb/-}.h
 	                       usr/lib/libxcb-${xcb}.*
 	                       usr/lib/pkgconfig/xcb-${xcb/-}.pc"
