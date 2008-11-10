@@ -7,13 +7,11 @@ PATCH_URI="0.3.0-no-undefined.patch"
 USE_MANAGED_MOUNT=1
 
 PKG_NAMES="${PN}"
-PKG_HINTS="src"
-PKG_CONTENTS[0]="usr/share/doc/"
+xcb_util_CONTENTS="usr/share/doc/"
 
 xcblibs="atom aux event icccm image keysyms property render-util reply"
 xcbvers=(1    0   1     1     0     0       1        0           1)
 
-n=1
 v=0
 for xcb in ${xcblibs}
 do
@@ -23,18 +21,18 @@ do
 		*)  	xtra=""  ;;
 	esac
 
-	PKG_NAMES+=" libxcb-${xcb}${xcbvers[$v]} libxcb-${xcb}-devel"
-	PKG_HINTS+=" ${xcb}-lib ${xcb}-dev"
-	PKG_CONTENTS[((n++))]="usr/bin/cygxcb-${xcb}-${xcbvers[((v++))]}.dll"
-	PKG_CONTENTS[((n++))]="${xtra} usr/include/xcb/xcb_${xcb/-}.h
+	xcb_v=${xcbvers[((v++))]}
+
+	PKG_NAMES+=" libxcb-${xcb}${xcb_v} libxcb-${xcb}-devel"
+	declare libxcb_${xcb/-/_}${xcb_v}_CONTENTS="usr/bin/cygxcb-${xcb}-${xcb_v}.dll"
+	declare libxcb_${xcb/-/_}_devel_CONTENTS="${xtra}
+	                       usr/include/xcb/xcb_${xcb/-}.h
 	                       usr/lib/libxcb-${xcb}.*
 	                       usr/lib/pkgconfig/xcb-${xcb/-}.pc"
 done
 
 # requires a symbol to be defined in the dependent executable
 PKG_NAMES+=" libxcb-wm-devel"
-PKG_HINTS+=" wm-dev"
-PKG_CONTENTS[((n++))]="usr/include/xcb/xcb_wm.h
+libxcb_wm_devel_CONTENTS="usr/include/xcb/xcb_wm.h
                        usr/lib/libxcb-wm.*
                        usr/lib/pkgconfig/xcb-wm.pc"
-unset n

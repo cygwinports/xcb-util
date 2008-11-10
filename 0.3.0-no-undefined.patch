@@ -1,3 +1,7 @@
+Do NOT add -no-undefined to libxcb_wm_la_LDFLAGS!  libxcb-wm requires that
+the implementing program define reparent_window(), so a static library is
+the only option.
+
 --- origsrc/xcb-util-0.3.0/atom/Makefile.am	2008-09-15 14:00:09.000000000 -0500
 +++ src/xcb-util-0.3.0/atom/Makefile.am	2008-09-22 02:55:01.020497800 -0500
 @@ -10,7 +10,7 @@
