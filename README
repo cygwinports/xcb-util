@@ -28,9 +28,9 @@ Runtime requirements:
 Build requirements:
 (besides corresponding -devel packages)
   autoconf2.5-2.63-1
-  automake1.10-1.10.1-1
+  automake1.10-1.10.1-2
   binutils-20080624-2
-  cygport-0.4.0-1
+  cygport-0.4.2-1
   gawk-3.1.6-1
   gcc-core-3.4.4-3
   gperf-3.0.3-1
@@ -48,33 +48,33 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack xcb-util-0.3.0-X-src.tar.bz2
+  unpack xcb-util-0.3.1-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./xcb-util-0.3.0-X.cygport all
+  cygport ./xcb-util-0.3.1-X.cygport all
 
 This will create:
-  /usr/src/libxcb-atom-devel-0.3.0-X.tar.bz2
-  /usr/src/libxcb-atom1-0.3.0-X.tar.bz2
-  /usr/src/libxcb-aux-devel-0.3.0-X.tar.bz2
-  /usr/src/libxcb-aux0-0.3.0-X.tar.bz2
-  /usr/src/libxcb-event-devel-0.3.0-X.tar.bz2
-  /usr/src/libxcb-event1-0.3.0-X.tar.bz2
-  /usr/src/libxcb-icccm-devel-0.3.0-X.tar.bz2
-  /usr/src/libxcb-icccm1-0.3.0-X.tar.bz2
-  /usr/src/libxcb-image-devel-0.3.0-X.tar.bz2
-  /usr/src/libxcb-image0-0.3.0-X.tar.bz2
-  /usr/src/libxcb-keysyms-devel-0.3.0-X.tar.bz2
-  /usr/src/libxcb-keysyms0-0.3.0-X.tar.bz2
-  /usr/src/libxcb-property-devel-0.3.0-X.tar.bz2
-  /usr/src/libxcb-property1-0.3.0-X.tar.bz2
-  /usr/src/libxcb-render-util-devel-0.3.0-X.tar.bz2
-  /usr/src/libxcb-render-util0-0.3.0-X.tar.bz2
-  /usr/src/libxcb-reply-devel-0.3.0-X.tar.bz2
-  /usr/src/libxcb-reply1-0.3.0-X.tar.bz2
-  /usr/src/libxcb-wm-devel-0.3.0-X.tar.bz2
-  /usr/src/xcb-util-0.3.0-X-src.tar.bz2
+  /usr/src/libxcb-atom-devel-0.3.1-X.tar.bz2
+  /usr/src/libxcb-atom1-0.3.1-X.tar.bz2
+  /usr/src/libxcb-aux-devel-0.3.1-X.tar.bz2
+  /usr/src/libxcb-aux0-0.3.1-X.tar.bz2
+  /usr/src/libxcb-event-devel-0.3.1-X.tar.bz2
+  /usr/src/libxcb-event1-0.3.1-X.tar.bz2
+  /usr/src/libxcb-icccm-devel-0.3.1-X.tar.bz2
+  /usr/src/libxcb-icccm1-0.3.1-X.tar.bz2
+  /usr/src/libxcb-image-devel-0.3.1-X.tar.bz2
+  /usr/src/libxcb-image0-0.3.1-X.tar.bz2
+  /usr/src/libxcb-keysyms-devel-0.3.1-X.tar.bz2
+  /usr/src/libxcb-keysyms0-0.3.1-X.tar.bz2
+  /usr/src/libxcb-property-devel-0.3.1-X.tar.bz2
+  /usr/src/libxcb-property1-0.3.1-X.tar.bz2
+  /usr/src/libxcb-render-util-devel-0.3.1-X.tar.bz2
+  /usr/src/libxcb-render-util0-0.3.1-X.tar.bz2
+  /usr/src/libxcb-reply-devel-0.3.1-X.tar.bz2
+  /usr/src/libxcb-reply1-0.3.1-X.tar.bz2
+  /usr/src/libxcb-wm-devel-0.3.1-X.tar.bz2
+  /usr/src/xcb-util-0.3.1-X-src.tar.bz2
 
 -------------------------------------------
 
@@ -182,9 +182,12 @@ Files included in the binary packages:
 
 Port Notes:
 
+----- version 0.3.1-1 -----
+Version bump.
+
 ----- version 0.3.0-1 -----
 Initial release for Cygwin.
 
 
 Cygwin port maintained by:
-http://x.cygwin.com/
+http://www.cygwinports.org/
