@@ -1,6 +1,5 @@
 category: X11
-requires: libxcb-atom-devel libxcb-aux-devel libxcb-event-devel libxcb-icccm-devel libxcb-image-devel libxcb-keysyms-devel libxcb-property-devel libxcb-render-util-devel libxcb-reply-devel libxcb-wm-devel
-sdesc: "XCB additional libraries (meta-package)"
+sdesc: "XCB additional libraries (sources)"
 ldesc: "The xcb-util module provides a number of libraries which sit on 
 top of libxcb, the core X protocol library, and some of the extension 
 libraries. These experimental libraries provide convenience functions 
