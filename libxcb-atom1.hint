@@ -1,5 +1,5 @@
 category: X11
-requires: cygwin libxcb1
+requires: cygwin libxcb1 libgcc1
 external-source: xcb-util
 sdesc: "XCB atom library (runtime)"
 ldesc: "The xcb-util module provides a number of libraries which sit on 
