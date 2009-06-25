@@ -1,5 +1,5 @@
 category: X11
-requires: cygwin libxcb1 libxcb-render0 libgcc1
+requires: libxcb1 libxcb-render0 libgcc1
 external-source: xcb-util
 sdesc: "XCB render-util library (runtime)"
 ldesc: "The xcb-util module provides a number of libraries which sit on 

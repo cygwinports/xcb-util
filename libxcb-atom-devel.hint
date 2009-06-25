@@ -1,5 +1,5 @@
 category: X11
-requires: cygwin libxcb-devel libxcb-atom1
+requires: libxcb-devel libxcb-atom1
 external-source: xcb-util
 sdesc: "XCB atom library (development)"
 ldesc: "The xcb-util module provides a number of libraries which sit on 

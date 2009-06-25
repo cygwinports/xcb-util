@@ -1,5 +1,5 @@
 category: X11
-requires: cygwin libxcb-devel libxcb-keysyms0
+requires: libxcb-devel libxcb-keysyms1
 external-source: xcb-util
 sdesc: "XCB keysyms library (development)"
 ldesc: "The xcb-util module provides a number of libraries which sit on 

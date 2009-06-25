@@ -1,5 +1,5 @@
 category: X11
-requires: cygwin libxcb-devel libxcb-reply1
+requires: libxcb-devel libxcb-reply1
 external-source: xcb-util
 sdesc: "XCB reply library (development)"
 ldesc: "The xcb-util module provides a number of libraries which sit on 

@@ -1,16 +1,13 @@
 DESCRIPTION="Additional XCB libraries"
 HOMEPAGE="http://xcb.sourceforge.net/"
 SRC_URI="http://xcb.freedesktop.org/dist/${P}.tar.bz2"
-PATCH_URI="0.3.0-no-undefined.patch"
-
-# aux/
-USE_MANAGED_MOUNT=1
+PATCH_URI="0.3.5-no-undefined.patch"
 
 PKG_NAMES="${PN}"
 xcb_util_CONTENTS="usr/share/doc/"
 
 xcblibs="atom aux event icccm image keysyms property render-util reply"
-xcbvers=(1    0   1     1     0     0       1        0           1)
+xcbvers=(1    0   1     1     0     1       1        0           1)
 
 v=0
 for xcb in ${xcblibs}
@@ -30,9 +27,3 @@ do
 	                       usr/lib/libxcb-${xcb}.*
 	                       usr/lib/pkgconfig/xcb-${xcb/-}.pc"
 done
-
-# requires a symbol to be defined in the dependent executable
-PKG_NAMES+=" libxcb-wm-devel"
-libxcb_wm_devel_CONTENTS="usr/include/xcb/xcb_wm.h
-                       usr/lib/libxcb-wm.*
-                       usr/lib/pkgconfig/xcb-wm.pc"

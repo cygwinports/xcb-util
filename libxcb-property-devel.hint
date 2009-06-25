@@ -1,5 +1,5 @@
 category: X11
-requires: cygwin libxcb-devel libxcb-event-devel libxcb-property1
+requires: libxcb-devel libxcb-event-devel libxcb-property1
 external-source: xcb-util
 sdesc: "XCB property library (development)"
 ldesc: "The xcb-util module provides a number of libraries which sit on 

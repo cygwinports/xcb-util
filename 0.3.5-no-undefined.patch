@@ -1,7 +1,3 @@
-Do NOT add -no-undefined to libxcb_wm_la_LDFLAGS!  libxcb-wm requires that
-the implementing program define reparent_window(), so a static library is
-the only option.
-
 --- origsrc/xcb-util-0.3.0/atom/Makefile.am	2008-09-15 14:00:09.000000000 -0500
 +++ src/xcb-util-0.3.0/atom/Makefile.am	2008-09-22 02:55:01.020497800 -0500
 @@ -10,7 +10,7 @@
@@ -55,13 +51,14 @@ the only option.
  
  pkgconfig_DATA = xcb-image.pc
  
---- origsrc/xcb-util-0.3.0/keysyms/Makefile.am	2008-06-17 15:19:44.000000000 -0500
-+++ src/xcb-util-0.3.0/keysyms/Makefile.am	2008-09-22 02:55:56.879872800 -0500
-@@ -10,6 +10,7 @@
+--- origsrc/xcb-util-0.3.5/keysyms/Makefile.am	2008-06-17 15:19:44.000000000 -0500
++++ src/xcb-util-0.3.5/keysyms/Makefile.am	2008-09-22 02:55:56.879872800 -0500
+@@ -10,7 +10,7 @@
  libxcb_keysyms_la_SOURCES = keysyms.c
  libxcb_keysyms_la_CPPFLAGS = $(XCB_CFLAGS)
  libxcb_keysyms_la_LIBADD = $(XCB_LIBS)
-+libxcb_keysyms_la_LDFLAGS = -no-undefined
+-libxcb_keysyms_la_LDFLAGS = -version-info 1:0:0
++libxcb_keysyms_la_LDFLAGS = -version-info 1:0:0 -no-undefined
  
  pkgconfig_DATA = xcb-keysyms.pc
  
