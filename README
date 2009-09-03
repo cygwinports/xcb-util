@@ -20,22 +20,22 @@ image: Port of Xlib's XImage and XShmImage functions.
 wm: Framework for window manager implementation.
 
 Runtime requirements:
-  cygwin-1.7.0-50
+  cygwin-1.7.0-60
   libgcc1-4.3.2-2
-  libxcb-render0-1.2.1-1
-  libxcb-shm0-1.2.1-1
-  libxcb1-1.2.1-1
+  libxcb-render0-1.4-1
+  libxcb-shm0-1.4-1
+  libxcb1-1.4-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  autoconf2.5-2.63-10
+  autoconf2.5-2.64-10
   automake1.10-1.10.2-10
-  binutils-20080624-2
-  cygport-0.9.7-1
+  binutils-2.19.51-1
+  cygport-0.9.9-1
   gawk-3.1.6-2
   gcc4-core-4.3.2-2
   gperf-3.0.3-1
-  libtool-2.2.7a-13
+  libtool-2.2.7a-14
   make-3.81-2
   pkg-config-0.23b-10
   sed-4.1.5-2
@@ -49,32 +49,32 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack xcb-util-0.3.5-X-src.tar.bz2
+  unpack xcb-util-0.3.6-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./xcb-util-0.3.5-X.cygport all
+  cygport ./xcb-util-0.3.6-X.cygport all
 
 This will create:
-  /usr/src/libxcb-atom-devel-0.3.5-X.tar.bz2
-  /usr/src/libxcb-atom1-0.3.5-X.tar.bz2
-  /usr/src/libxcb-aux-devel-0.3.5-X.tar.bz2
-  /usr/src/libxcb-aux0-0.3.5-X.tar.bz2
-  /usr/src/libxcb-event-devel-0.3.5-X.tar.bz2
-  /usr/src/libxcb-event1-0.3.5-X.tar.bz2
-  /usr/src/libxcb-icccm-devel-0.3.5-X.tar.bz2
-  /usr/src/libxcb-icccm1-0.3.5-X.tar.bz2
-  /usr/src/libxcb-image-devel-0.3.5-X.tar.bz2
-  /usr/src/libxcb-image0-0.3.5-X.tar.bz2
-  /usr/src/libxcb-keysyms-devel-0.3.5-X.tar.bz2
-  /usr/src/libxcb-keysyms1-0.3.5-X.tar.bz2
-  /usr/src/libxcb-property-devel-0.3.5-X.tar.bz2
-  /usr/src/libxcb-property1-0.3.5-X.tar.bz2
-  /usr/src/libxcb-render-util-devel-0.3.5-X.tar.bz2
-  /usr/src/libxcb-render-util0-0.3.5-X.tar.bz2
-  /usr/src/libxcb-reply-devel-0.3.5-X.tar.bz2
-  /usr/src/libxcb-reply1-0.3.5-X.tar.bz2
-  /usr/src/xcb-util-0.3.5-X-src.tar.bz2
+  /usr/src/libxcb-atom-devel-0.3.6-X.tar.bz2
+  /usr/src/libxcb-atom1-0.3.6-X.tar.bz2
+  /usr/src/libxcb-aux-devel-0.3.6-X.tar.bz2
+  /usr/src/libxcb-aux0-0.3.6-X.tar.bz2
+  /usr/src/libxcb-event-devel-0.3.6-X.tar.bz2
+  /usr/src/libxcb-event1-0.3.6-X.tar.bz2
+  /usr/src/libxcb-icccm-devel-0.3.6-X.tar.bz2
+  /usr/src/libxcb-icccm1-0.3.6-X.tar.bz2
+  /usr/src/libxcb-image-devel-0.3.6-X.tar.bz2
+  /usr/src/libxcb-image0-0.3.6-X.tar.bz2
+  /usr/src/libxcb-keysyms-devel-0.3.6-X.tar.bz2
+  /usr/src/libxcb-keysyms1-0.3.6-X.tar.bz2
+  /usr/src/libxcb-property-devel-0.3.6-X.tar.bz2
+  /usr/src/libxcb-property1-0.3.6-X.tar.bz2
+  /usr/src/libxcb-render-util-devel-0.3.6-X.tar.bz2
+  /usr/src/libxcb-render-util0-0.3.6-X.tar.bz2
+  /usr/src/libxcb-reply-devel-0.3.6-X.tar.bz2
+  /usr/src/libxcb-reply1-0.3.6-X.tar.bz2
+  /usr/src/xcb-util-0.3.6-X-src.tar.bz2
 
 -------------------------------------------
 
@@ -175,6 +175,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 0.3.6-1 -----
+Version bump.
 
 ----- version 0.3.5-1 -----
 Version bump.
