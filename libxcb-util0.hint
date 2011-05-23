@@ -1,7 +1,7 @@
 category: X11
-requires: libxcb-devel libxcb-render-devel libxcb-render-util0
+requires: libxcb1
 external-source: xcb-util
-sdesc: "XCB render-util library (development)"
+sdesc: "XCB utility library (runtime)"
 ldesc: "The xcb-util module provides a number of libraries which sit on 
 top of libxcb, the core X protocol library, and some of the extension 
 libraries. These experimental libraries provide convenience functions 

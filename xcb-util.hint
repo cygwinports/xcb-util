@@ -1,5 +1,5 @@
 category: X11
-sdesc: "XCB additional libraries (sources)"
+sdesc: "XCB utility library (sources)"
 ldesc: "The xcb-util module provides a number of libraries which sit on 
 top of libxcb, the core X protocol library, and some of the extension 
 libraries. These experimental libraries provide convenience functions 
